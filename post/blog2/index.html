@@ -17,18 +17,18 @@
     
 
     
-    <title>Blog2</title>
+    <title>blog2</title>
     <meta name="description" content="Sky above, sand below and peace within">
-    <meta name="keywords" content='blog, gokarna, hugo'>
+    <meta name="keywords" content='blog, gokarna, hugo, Poisoning Attacks'>
 
     <meta property="og:url" content="https://ncepuzs.github.io/post/blog2/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Blog2">
+    <meta property="og:title" content="blog2">
     <meta property="og:description" content="Sky above, sand below and peace within">
     <meta property="og:image" content="/images/avatar.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Blog2">
+    <meta name="twitter:title" content="blog2">
     <meta name="twitter:description" content="Sky above, sand below and peace within">
     <meta property="twitter:domain" content="https://ncepuzs.github.io/post/blog2/">
     <meta property="twitter:url" content="https://ncepuzs.github.io/post/blog2/">
@@ -163,7 +163,7 @@
     <div class="post container">
 
     <div class="post-header-section">
-        <h1>Blog2</h1>
+        <h1>blog2</h1>
         <small role="doc-subtitle"></small>
         <p class="post-date">
             October 30, 2021
@@ -171,12 +171,18 @@
 
         <ul class="post-tags">
         
+            <li class="post-tag"><a href="/tags/poisoning-attacks">Poisoning Attacks</a></li>
+        
         </ul>
     </div>
 
     <div class="post-content">
         <p>
-            <h2 id="this-is-the-second-post">This is the second post.</h2>
+            <h2 id="towards-poisoning-of-deep-learning-algorithms-with-back-gradient-optimization">Towards Poisoning of Deep Learning Algorithms with Back-gradient Optimization</h2>
+<p>这篇文章的主要目的是降低Data poisoning attacks的复杂度，从而将其推广到更多的模型算法中去。在此之前，data poisoning 一般只能在binary learning算法中实施。
+本文的主要贡献有两个。</p>
+<p>第一，使用back-gradient技术，计算反向传播的梯度，以此来方向地追溯模型参数更新的过程。只要能够使用梯度进行参数更新的算法都可以作为我们的攻击对象，包括DNN。
+第二，由于部分投毒样本的存在，模型整体的效果可能会受到严重的影响。这篇文章提供了3个应用场景来说明攻击的有效性，分别是spam filtering, malware detection, and handwritten digit recognition。	另外本文调研了poisoning attacks 的transferability，这个性质之前只是在evasion attacks中研究过，但从未在poisoning attacks中研究过。</p>
 
         </p>
     </div>
@@ -189,7 +195,7 @@
         </main><footer class="footer">
     <span>&copy; 2021 The Marauders</span>
     <span>
-        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+        Say hello world &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
     </span>
 </footer>
 </body>

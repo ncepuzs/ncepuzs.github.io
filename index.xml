@@ -41,6 +41,28 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
     </item>
     
     <item>
+      <title>Privacy-Preserving Deep Learning via Additively Homomorphic Encryption</title>
+      <link>https://ncepuzs.github.io/post/blog1/</link>
+      <pubDate>Sat, 31 Oct 2020 10:55:28 +0800</pubDate>
+      
+      <guid>https://ncepuzs.github.io/post/blog1/</guid>
+      <description>横向联邦学习提出之处，设计者主要考虑来自中心服务器的隐私威胁。</description>
+    </item>
+    
+    <item>
+      <title>Auto_grad [Pytorch]</title>
+      <link>https://ncepuzs.github.io/post/auto_grad/</link>
+      <pubDate>Thu, 01 Oct 2020 17:55:28 +0800</pubDate>
+      
+      <guid>https://ncepuzs.github.io/post/auto_grad/</guid>
+      <description>Auto_grad in Pytorch 1. 计算图 在pytorch中，如果一个变量格式为Tensor，且属性requires_grad=True，则使用这个变量产生的其他变量的requires_grad属性也将为True，同时会产生一个计算图。具体可参考 [Tensor的自动求导]: https://zhuanlan.zhihu.com/p/51385110
+2. 自动求导方法： 通常情况下，只有标量scalar才能对张量tensor求导，而这个scalar通常也就是我们的loss，这也与我们的直观逻辑相符。在pytorch中常用的自动求导方法为backward()。在构造完计算图之后$J=f(x)$，便可通过$J.backward()$完成求导。
+3.当tensor对张量tensor求导时 这种情况会被认为是多个loss同时求导，即$J=[loss1, loss2, loss3]$对tensor求导，其中每个loss都可以通过标量求导方法进行求导，得到的结果也是tensor的形式[grad1, grad2, grad3].
+但此时不能直接使用$J.backward()$，而是要指定$J$中每个loss的权重，如果没有需要指定的权重，那就全部置为1，即$J.backward(gradients=[1.0,1.0,1.0])$即可完成tensor对tensor的求导。
+4.多次求导出现错误 如果使用一个计算图进行$J$对$x$求导时，如果$x$不是我们直接定义的变量，而是一个计算图中的中间变量，那这样一次backward()就会销毁计算图，再次进行求导时就会报错。我们通常不会使用一个计算图两次，这种行为一般也是存在逻辑错误的，所以要避免这种错误。</description>
+    </item>
+    
+    <item>
       <title>Emoji Support</title>
       <link>https://ncepuzs.github.io/post/emoji-support/</link>
       <pubDate>Thu, 01 Oct 2020 17:55:28 +0800</pubDate>
@@ -54,21 +76,13 @@ Gone camping! {?:}tent: Be back soon. That is so funny!</description>
     </item>
     
     <item>
-      <title>Blog2</title>
+      <title>blog2</title>
       <link>https://ncepuzs.github.io/post/blog2/</link>
       <pubDate>Sat, 30 Oct 2021 23:07:10 +0800</pubDate>
       
       <guid>https://ncepuzs.github.io/post/blog2/</guid>
-      <description>This is the second post. </description>
-    </item>
-    
-    <item>
-      <title>Blog1</title>
-      <link>https://ncepuzs.github.io/post/blog1/</link>
-      <pubDate>Sat, 30 Oct 2021 22:45:21 +0800</pubDate>
-      
-      <guid>https://ncepuzs.github.io/post/blog1/</guid>
-      <description>Paper1</description>
+      <description>Towards Poisoning of Deep Learning Algorithms with Back-gradient Optimization 这篇文章的主要目的是降低Data poisoning attacks的复杂度，从而将其推广到更多的模型算法中去。在此之前，data poisoning 一般只能在binary learning算法中实施。 本文的主要贡献有两个。
+第一，使用back-gradient技术，计算反向传播的梯度，以此来方向地追溯模型参数更新的过程。只要能够使用梯度进行参数更新的算法都可以作为我们的攻击对象，包括DNN。 第二，由于部分投毒样本的存在，模型整体的效果可能会受到严重的影响。这篇文章提供了3个应用场景来说明攻击的有效性，分别是spam filtering, malware detection, and handwritten digit recognition。	另外本文调研了poisoning attacks 的transferability，这个性质之前只是在evasion attacks中研究过，但从未在poisoning attacks中研究过。</description>
     </item>
     
     <item>
@@ -78,6 +92,18 @@ Gone camping! {?:}tent: Be back soon. That is so funny!</description>
       
       <guid>https://ncepuzs.github.io/post/lorem-ipsum/</guid>
       <description>Heading 1 &amp;ldquo;Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ncepuzs.github.io/post/blockchain/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ncepuzs.github.io/post/blockchain/</guid>
+      <description>Hyperledger Fabric 传统架构：Order-Execute，先对节点排序，再执行。（排序是 共识。。。） 弊端：顺序执行会限制性能，另外需要满足确定性
+Hyperledger Fabric是一种Execute-Order的架构。
+Classification of blockchain: 区块链可以分为许可链和非许可链，其中许可链需要准入机制，而非许可链则不需要，一般对应的是公链。另外，许可链和非许可链的共识机制也有区别。 Permissioned blockchain(许可链) Permissionless blockchain(非许可链)
+Hyperledger Fabric的流程：  User（即APP）现将交易信息发给很多个Endorse Peer Endorse Peer 模拟交易之后会判断交易能否通过，然后分别将签名后的背书结果返回给User。 User将交易信息以及背书信息发给Order 节点（只有当多数的背书节点认为交易能够通过时接下来才能有效地更新区块）。 Order节点将信息广播给各个节点，每个节点验证背书信息没问题且user状态没问题，则进行区块的更新。   </description>
     </item>
     
     <item>

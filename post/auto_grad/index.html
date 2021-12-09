@@ -17,25 +17,25 @@
     
 
     
-    <title>Blüdhaven</title>
-    <meta name="description" content="Sky above, sand below and peace within">
-    <meta name="keywords" content='blog, gokarna, hugo'>
+    <title>Auto_grad [Pytorch]</title>
+    <meta name="description" content="Introduction to Pytorch.">
+    <meta name="keywords" content='blog, gokarna, hugo, Pytorch'>
 
-    <meta property="og:url" content="https://ncepuzs.github.io/projects/bludhaven/">
+    <meta property="og:url" content="https://ncepuzs.github.io/post/auto_grad/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Blüdhaven">
-    <meta property="og:description" content="Sky above, sand below and peace within">
+    <meta property="og:title" content="Auto_grad [Pytorch]">
+    <meta property="og:description" content="Introduction to Pytorch.">
     <meta property="og:image" content="/images/avatar.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Blüdhaven">
-    <meta name="twitter:description" content="Sky above, sand below and peace within">
-    <meta property="twitter:domain" content="https://ncepuzs.github.io/projects/bludhaven/">
-    <meta property="twitter:url" content="https://ncepuzs.github.io/projects/bludhaven/">
+    <meta name="twitter:title" content="Auto_grad [Pytorch]">
+    <meta name="twitter:description" content="Introduction to Pytorch.">
+    <meta property="twitter:domain" content="https://ncepuzs.github.io/post/auto_grad/">
+    <meta property="twitter:url" content="https://ncepuzs.github.io/post/auto_grad/">
     <meta name="twitter:image" content="/images/avatar.webp">
 
     
-    <link rel="canonical" href="https://ncepuzs.github.io/projects/bludhaven/" />
+    <link rel="canonical" href="https://ncepuzs.github.io/post/auto_grad/" />
 
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
@@ -160,24 +160,43 @@
     </nav>
 </header>
 <main id="content">
-    
-
     <div class="post container">
 
     <div class="post-header-section">
-        <h1>Blüdhaven</h1>
+        <h1>Auto_grad [Pytorch]</h1>
+        <small role="doc-subtitle">Introduction to Pytorch.</small>
+        <p class="post-date">
+            October 1, 2020
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="/tags/pytorch">Pytorch</a></li>
+        
+        </ul>
     </div>
 
     <div class="post-content">
         <p>
-            <h3 id="history">History</h3>
-<p>Blüdhaven was a former whaling town, which was officially incorporated as a &ldquo;Commonwealth&rdquo; in 1912. The town had a generally poor socio-economic populace, owing in part to failed efforts to transform itself into a manufacturing and shipping center.</p>
+            <h1 id="auto_grad-in-pytorch">Auto_grad in Pytorch</h1>
+<h2 id="1-计算图">1. 计算图</h2>
+<p>在pytorch中，如果一个变量格式为Tensor，且属性requires_grad=True，则使用这个变量产生的其他变量的requires_grad属性也将为True，同时会产生一个计算图。具体可参考
+[Tensor的自动求导]: <a href="https://zhuanlan.zhihu.com/p/51385110">https://zhuanlan.zhihu.com/p/51385110</a></p>
+<h2 id="2-自动求导方法">2. 自动求导方法：</h2>
+<p>通常情况下，只有标量scalar才能对张量tensor求导，而这个scalar通常也就是我们的loss，这也与我们的直观逻辑相符。在pytorch中常用的自动求导方法为backward()。在构造完计算图之后$J=f(x)$，便可通过$J.backward()$完成求导。</p>
+<h2 id="3当tensor对张量tensor求导时">3.当tensor对张量tensor求导时</h2>
+<p>这种情况会被认为是多个loss同时求导，即$J=[loss1, loss2, loss3]$对tensor求导，其中每个loss都可以通过标量求导方法进行求导，得到的结果也是tensor的形式[grad1, grad2, grad3].</p>
+<p>但此时不能直接使用$J.backward()$，而是要指定$J$中每个loss的权重，如果没有需要指定的权重，那就全部置为1，即$J.backward(gradients=[1.0,1.0,1.0])$即可完成tensor对tensor的求导。</p>
+<h2 id="4多次求导出现错误">4.多次求导出现错误</h2>
+<p>如果使用一个计算图进行$J$对$x$求导时，如果$x$不是我们直接定义的变量，而是一个计算图中的中间变量，那这样一次backward()就会销毁计算图，再次进行求导时就会报错。我们通常不会使用一个计算图两次，这种行为一般也是存在逻辑错误的，所以要避免这种错误。</p>
 
         </p>
     </div>
 </div>
 
 
+
+    
 
         </main><footer class="footer">
     <span>&copy; 2021 The Marauders</span>

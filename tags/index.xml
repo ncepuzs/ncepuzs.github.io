@@ -6,13 +6,13 @@
     <description>Recent content in Tags on ZS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 30 Oct 2021 22:45:21 +0800</lastBuildDate><atom:link href="https://ncepuzs.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Oct 2021 23:07:10 +0800</lastBuildDate><atom:link href="https://ncepuzs.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>blog</title>
-      <link>https://ncepuzs.github.io/tags/blog/</link>
-      <pubDate>Sat, 30 Oct 2021 22:45:21 +0800</pubDate>
+      <title>Poisoning Attacks</title>
+      <link>https://ncepuzs.github.io/tags/poisoning-attacks/</link>
+      <pubDate>Sat, 30 Oct 2021 23:07:10 +0800</pubDate>
       
-      <guid>https://ncepuzs.github.io/tags/blog/</guid>
+      <guid>https://ncepuzs.github.io/tags/poisoning-attacks/</guid>
       <description></description>
     </item>
     
@@ -22,6 +22,24 @@
       <pubDate>Thu, 15 Apr 2021 23:39:49 +0530</pubDate>
       
       <guid>https://ncepuzs.github.io/tags/document/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Federated Learning</title>
+      <link>https://ncepuzs.github.io/tags/federated-learning/</link>
+      <pubDate>Sat, 31 Oct 2020 10:55:28 +0800</pubDate>
+      
+      <guid>https://ncepuzs.github.io/tags/federated-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pytorch</title>
+      <link>https://ncepuzs.github.io/tags/pytorch/</link>
+      <pubDate>Thu, 01 Oct 2020 17:55:28 +0800</pubDate>
+      
+      <guid>https://ncepuzs.github.io/tags/pytorch/</guid>
       <description></description>
     </item>
     

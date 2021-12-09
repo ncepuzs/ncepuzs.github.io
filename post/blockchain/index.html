@@ -17,25 +17,25 @@
     
 
     
-    <title>Blüdhaven</title>
+    <title>ZS</title>
     <meta name="description" content="Sky above, sand below and peace within">
     <meta name="keywords" content='blog, gokarna, hugo'>
 
-    <meta property="og:url" content="https://ncepuzs.github.io/projects/bludhaven/">
+    <meta property="og:url" content="https://ncepuzs.github.io/post/blockchain/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Blüdhaven">
+    <meta property="og:title" content="ZS">
     <meta property="og:description" content="Sky above, sand below and peace within">
     <meta property="og:image" content="/images/avatar.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Blüdhaven">
+    <meta name="twitter:title" content="ZS">
     <meta name="twitter:description" content="Sky above, sand below and peace within">
-    <meta property="twitter:domain" content="https://ncepuzs.github.io/projects/bludhaven/">
-    <meta property="twitter:url" content="https://ncepuzs.github.io/projects/bludhaven/">
+    <meta property="twitter:domain" content="https://ncepuzs.github.io/post/blockchain/">
+    <meta property="twitter:url" content="https://ncepuzs.github.io/post/blockchain/">
     <meta name="twitter:image" content="/images/avatar.webp">
 
     
-    <link rel="canonical" href="https://ncepuzs.github.io/projects/bludhaven/" />
+    <link rel="canonical" href="https://ncepuzs.github.io/post/blockchain/" />
 
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
@@ -160,24 +160,46 @@
     </nav>
 </header>
 <main id="content">
-    
-
     <div class="post container">
 
     <div class="post-header-section">
-        <h1>Blüdhaven</h1>
+        <h1></h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            January 1, 0001
+        </p>
+
+        <ul class="post-tags">
+        
+        </ul>
     </div>
 
     <div class="post-content">
         <p>
-            <h3 id="history">History</h3>
-<p>Blüdhaven was a former whaling town, which was officially incorporated as a &ldquo;Commonwealth&rdquo; in 1912. The town had a generally poor socio-economic populace, owing in part to failed efforts to transform itself into a manufacturing and shipping center.</p>
+            <h1 id="hyperledger-fabric">Hyperledger Fabric</h1>
+<p>传统架构：Order-Execute，先对节点排序，再执行。（排序是 共识。。。）
+弊端：顺序执行会限制性能，另外需要满足确定性</p>
+<p>Hyperledger Fabric是一种Execute-Order的架构。</p>
+<h2 id="classification-of-blockchain">Classification of blockchain:</h2>
+<p>区块链可以分为许可链和非许可链，其中许可链需要准入机制，而非许可链则不需要，一般对应的是公链。另外，许可链和非许可链的共识机制也有区别。
+Permissioned blockchain(许可链)
+Permissionless blockchain(非许可链)</p>
+<h2 id="hyperledger-fabric的流程">Hyperledger Fabric的流程：</h2>
+<ol>
+<li>User（即APP）现将交易信息发给很多个Endorse Peer</li>
+<li>Endorse Peer 模拟交易之后会判断交易能否通过，然后分别将签名后的背书结果返回给User。</li>
+<li>User将交易信息以及背书信息发给Order 节点（只有当多数的背书节点认为交易能够通过时接下来才能有效地更新区块）。</li>
+<li>Order节点将信息广播给各个节点，每个节点验证背书信息没问题且user状态没问题，则进行区块的更新。
+<img src="../images/Fabric.png" alt="avatar"></li>
+</ol>
 
         </p>
     </div>
 </div>
 
 
+
+    
 
         </main><footer class="footer">
     <span>&copy; 2021 The Marauders</span>

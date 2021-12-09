@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Poisoning Attacks on ZS</title>
+    <link>https://ncepuzs.github.io/tags/poisoning-attacks/</link>
+    <description>Recent content in Poisoning Attacks on ZS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 30 Oct 2021 23:07:10 +0800</lastBuildDate><atom:link href="https://ncepuzs.github.io/tags/poisoning-attacks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>blog2</title>
+      <link>https://ncepuzs.github.io/post/blog2/</link>
+      <pubDate>Sat, 30 Oct 2021 23:07:10 +0800</pubDate>
+      
+      <guid>https://ncepuzs.github.io/post/blog2/</guid>
+      <description>Towards Poisoning of Deep Learning Algorithms with Back-gradient Optimization 这篇文章的主要目的是降低Data poisoning attacks的复杂度，从而将其推广到更多的模型算法中去。在此之前，data poisoning 一般只能在binary learning算法中实施。 本文的主要贡献有两个。
+第一，使用back-gradient技术，计算反向传播的梯度，以此来方向地追溯模型参数更新的过程。只要能够使用梯度进行参数更新的算法都可以作为我们的攻击对象，包括DNN。 第二，由于部分投毒样本的存在，模型整体的效果可能会受到严重的影响。这篇文章提供了3个应用场景来说明攻击的有效性，分别是spam filtering, malware detection, and handwritten digit recognition。	另外本文调研了poisoning attacks 的transferability，这个性质之前只是在evasion attacks中研究过，但从未在poisoning attacks中研究过。</description>
+    </item>
+    
+  </channel>
+</rss>
