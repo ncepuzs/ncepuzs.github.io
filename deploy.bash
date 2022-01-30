@@ -3,6 +3,7 @@ hugo --theme="gokarna" --baseUrl="https://ncepuzs.github.io" --buildDrafts
 echo "================1. Already complete deployment========================="
 cd public
 git fetch
+git pull
 git add .
 git commit -m "new post"
 # export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 #all_proxy=socks5://127.0.0.1:7890
