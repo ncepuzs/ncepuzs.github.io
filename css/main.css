@@ -20,6 +20,7 @@
 }
 
 html {
+  background-image: url("images/bgi1.jpeg")
   background-color: rgb(var(--light-primary-color));
   color: var(--light-text-color);
   font-family: "Lato", sans-serif;
@@ -30,6 +31,7 @@ html {
 
 body {
   margin-bottom: 170px;
+  background-image: "/images/ironman1.jpeg"
 }
 
 b,
@@ -295,6 +297,7 @@ table td {
 /* HOME PAGE */
 .home-about {
   text-align: center;
+  background-image: "/images/ironman1.jpeg"
 }
 
 .home-about .avatar img {
