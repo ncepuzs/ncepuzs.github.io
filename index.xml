@@ -6,7 +6,7 @@
     <description>Recent content on ZS_</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 30 Oct 2021 23:07:10 +0800</lastBuildDate><atom:link href="https://ncepuzs.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Feb 2022 16:46:46 +1100</lastBuildDate><atom:link href="https://ncepuzs.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Theme Documentation - Basics</title>
       <link>https://ncepuzs.github.io/post/theme-documentation-basics/</link>
@@ -73,6 +73,15 @@ The emojify function can be called directly in templates or Inline Shortcodes.
 To enable emoji globally, set enableEmoji to true in your site configuration and then you can type emoji shorthand codes directly in content files.
 These begin and end with a colon and include the code of an emoji:
 Gone camping! {?:}tent: Be back soon. That is so funny!</description>
+    </item>
+    
+    <item>
+      <title>Entangled Watermarks as a Defense Against Model Extraction</title>
+      <link>https://ncepuzs.github.io/posts/entangled-watermarks-as-a-defense-against-model-extraction/</link>
+      <pubDate>Sun, 13 Feb 2022 16:46:46 +1100</pubDate>
+      
+      <guid>https://ncepuzs.github.io/posts/entangled-watermarks-as-a-defense-against-model-extraction/</guid>
+      <description></description>
     </item>
     
     <item>
