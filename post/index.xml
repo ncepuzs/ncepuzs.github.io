@@ -6,7 +6,7 @@
     <description>Recent content in Posts on ZS_</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 30 Oct 2021 23:07:10 +0800</lastBuildDate><atom:link href="https://ncepuzs.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ncepuzs.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Theme Documentation - Basics</title>
       <link>https://ncepuzs.github.io/post/theme-documentation-basics/</link>
@@ -38,6 +38,15 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
       
       <guid>https://ncepuzs.github.io/post/markdown-syntax/</guid>
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Entangled Watermarks as a Defense against Model Extraction</title>
+      <link>https://ncepuzs.github.io/post/entangled-watermarks-as-a-defense-against-model-extraction/</link>
+      <pubDate>Thu, 10 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ncepuzs.github.io/post/entangled-watermarks-as-a-defense-against-model-extraction/</guid>
+      <description>|Title: |Entangled Watermarks as a Defense against Model Extraction |Author &amp;amp; Institution:| Hengrui Jia &amp;amp; University of Toronto |Publisher &amp;amp; Date:| Usenix 2021 |Tags:| Poisoning attacks, watermark |Paper:| Address   1. Motivation: 1). Intellenctual Property and Model Extraction Attacks Deep Neural Networks is expensive for training, including collecting large amount of labeled data and requiring large computational power. However, model extraction attacks can steal a trained model successfully only requiring query-access.</description>
     </item>
     
     <item>

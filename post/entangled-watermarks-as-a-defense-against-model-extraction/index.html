@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Entangled Watermarks as a Defense against Model Extraction</title>
+    <meta name="description" content="Watermark of models">
+    <meta name="keywords" content='blog, gokarna, hugo, Poisoning_Attacks, Watermark'>
+
+    <meta property="og:url" content="https://ncepuzs.github.io/post/entangled-watermarks-as-a-defense-against-model-extraction/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Entangled Watermarks as a Defense against Model Extraction">
+    <meta property="og:description" content="Watermark of models">
+    <meta property="og:image" content="/images/ironman1.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Entangled Watermarks as a Defense against Model Extraction">
+    <meta name="twitter:description" content="Watermark of models">
+    <meta property="twitter:domain" content="https://ncepuzs.github.io/post/entangled-watermarks-as-a-defense-against-model-extraction/">
+    <meta property="twitter:url" content="https://ncepuzs.github.io/post/entangled-watermarks-as-a-defense-against-model-extraction/">
+    <meta name="twitter:image" content="/images/ironman1.webp">
+
+    
+    <link rel="canonical" href="https://ncepuzs.github.io/post/entangled-watermarks-as-a-defense-against-model-extraction/" />
+
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="/css/dark.css">
+
+    <script src="/js/svg-injector.min.js"></script>
+    <script src="/js/feather-icons.min.js"></script>
+    <script src="/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://ncepuzs.github.io">
+                <img src="/images/ironman1.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://ncepuzs.github.io">ZS_</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="/"> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/post/"> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/projects/"> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/tags/"> Tags </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/526avijitgupta/gokarna"><span data-feather='github'></span>  </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://www.buymeacoffee.com/avijitgupta"><span data-feather='coffee'></span>  </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/index.xml"><span data-feather='rss'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="/"> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/post/"> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/projects/"> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/tags/"> Tags </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/526avijitgupta/gokarna"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://www.buymeacoffee.com/avijitgupta"><span data-feather='coffee'></span>  </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/index.xml"><span data-feather='rss'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+
+    <div class="post-header-section">
+        <h1>Entangled Watermarks as a Defense against Model Extraction</h1>
+        <small role="doc-subtitle">Watermark of models</small>
+        <p class="post-date">
+            February 10, 2022
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="/tags/poisoning_attacks">Poisoning_Attacks</a></li>
+        
+            <li class="post-tag"><a href="/tags/watermark">Watermark</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <hr>
+<ul>
+<li>|<strong>Title:</strong> |Entangled Watermarks as a Defense against Model Extraction</li>
+<li>|<strong>Author &amp; Institution:</strong>| Hengrui Jia &amp; <em>University of Toronto</em></li>
+<li>|<strong>Publisher &amp; Date:</strong>| Usenix 2021</li>
+<li>|<strong>Tags:</strong>| Poisoning attacks, watermark</li>
+<li>|<strong>Paper:</strong>| <a href="https://www.usenix.org/conference/usenixsecurity21/presentation/jia">Address</a></li>
+</ul>
+<hr>
+<h2 id="1-motivation">1. Motivation:</h2>
+<h3 id="1-intellenctual-property-and-model-extraction-attacks">1). Intellenctual Property and Model Extraction Attacks</h3>
+<p>Deep Neural Networks is expensive for training, including collecting large amount of labeled data and requiring large computational power. However, <strong>model extraction attacks</strong> can steal a trained model successfully only requiring query-access.</p>
+<h3 id="2-defense-against-model-extraction-attacks-is-hard">2). Defense against model extraction attacks is hard.</h3>
+<p>Preventing model extraction is difﬁcult without sacriﬁcing performance for legitimate users. Usually, watermark is a technique to claim ownership. However, it is easily to be defeated in model extraction attacks.</p>
+<blockquote>
+<p>Naive watermarking can be defeated by an adaptive attacker because the watermarks are outliers to the task distribution. As long as the adversary queries the watermarked model only on inputs that are sampled from the task distribution, the stolen model will only retain the victim model’s decision surface relevant to the task distribution, and therefore ignore the decision surface learned relevant to watermarking.</p>
+</blockquote>
+<blockquote>
+<p>In other words, the reason why watermarking can be performed with limited impact on the model’s accuracy is the reason why watermarks can easily be removed by an adversary.</p>
+</blockquote>
+<h2 id="2-methods">2. Methods:</h2>
+<h3 id="1-reason-why-watermark-doesnot-work">1). Reason why watermark doesnot work</h3>
+<p>The reason why watermark doesnot work in the extracted model is that the parameters can be roughly partitioned to two subsets (classification task v.s. watermark). Different neurons will be activated for classification or watermark. Almost all neurons can be updated in the BP for classification tasks while only several neurons will be updated for watermark. So neurons for watermark are not updated in the extraction of model because adversary will only select in-distribution sampels.</p>
+<h3 id="2-entangle-classification-task-and-watermark-task">2). Entangle classification task and watermark task</h3>
+<p>They use Soft Nearest Neighbor Loss (SNNL) to make the model avoid being partitioned into distinguishable sub-models, which will not suvive extraction.</p>
+<blockquote>
+<p>When points from different groups are closer relative to the average distance between two points, the manifolds are said to be entangled.</p>
+</blockquote>
+<h3 id="3-find-position-of-trigger-via-snnl">3). Find position of trigger via SNNL</h3>
+<p>A proper trigger should not change the semantic (i.e., visual label). Therefore, the position of trigger is important. This location can be determined as the area with the largest gradient of SNNL with respect to the candidate input.</p>
+<h3 id="4-generate-watermarked-data-via-fgsm">4). Generate watermarked data via FGSM</h3>
+<p>In the optimization of watermarked data, opposite optimization methods of algorithms to find adversarial samples can be used. Two FGSM procedures are used in this paper. The first one is to improve the loss_CE between predicated label of watermarked data and target label (decrease the semantic changes) by adding perturbations. The second one is to iprove the SNNL of watermarked data and data with target label.</p>
+<h3 id="5-alternative-training">5). Alternative training</h3>
+<p>Training of watermark task and premary task are performed alternatively.</p>
+<h2 id="3-experiments">3. Experiments:</h2>
+<h3 id="1no-free-lunch-watermark-vs-utility">1).No Free Lunch: Watermark vs. Utility</h3>
+<blockquote>
+<p>They explore the trade-off between successfully encoding watermarks and correctly predicting on the task distribution, and it becomes exponentially harder to improve accuracy by decreasing the watermark success rate.</p>
+</blockquote>
+<h3 id="2-evaluation-of-defense-against-backdoor-attacks">2). Evaluation of defense against backdoor attacks</h3>
+<blockquote>
+<p>Pruning and Fine Pruning are ineffective against EWE.
+Neural Cleanse (one of defenses) considers the problem of backdooring the entire set of classes (i.e., all classes are considered as source classes). And common backdoor attacks will change the decision surface significantly, which would be detected by Neural Cleanse. In EWE, we insert watermarks only for a single source-target class pair. Besides, watermarked data is not restricted by the degree of perturbation and could even be OOD. Thus entangling it with c Tdoes not change the decision boundary. This makes it hard for Neural Cleanse to detect EWE watermarks.</p>
+</blockquote>
+<h2 id="4-key-contributions">4. Key Contributions:</h2>
+<h3 id="1they-propose-ewe-to-force-the-model-to-entangle-representations-for-legitimate-task-data-and-watermarks">1).They propose EWE to force the model to entangle representations for legitimate task data and watermarks.</h3>
+<h3 id="2their-watermarked-is-indeed-robust-to-not-only-model-extraction-attacks-but-also-piracy-attacks-anomaly-detection-transfer-learning-and-efforts-used-to-mitigate-backdoor-poisoning-attacks">2).Their watermarked is indeed robust to not only model extraction attacks, but also piracy attacks, anomaly detection, transfer learning, and efforts used to mitigate backdoor (poisoning) attacks.</h3>
+<h2 id="5-comments">5. Comments:</h2>
+<h3 id="1-connection-between-ai-security-and-cyber-security">1). Connection between AI security and Cyber security.</h3>
+<blockquote>
+<p>Techniques for model extraction typically require that the adversary query a victim model with inputs of their choiceanalogous to <strong>chosen-plaintext attacks in cryptography.</strong></p>
+</blockquote>
+<blockquote>
+<p>The adversary uses the victim model to label a substitute dataset. One form of extraction involves using the substitute dataset to train a substitute model, which is a stolen copy of the victim model</p>
+</blockquote>
+<h3 id="2-transfer-these-techniques-to-model-inversion-attacks-they-are-similar-especifically-for-the-tradeoff-between-performance-and-privacy">2). Transfer these techniques to model inversion attacks. They are similar, especifically for the tradeoff between performance and privacy.</h3>
+<h3 id="3-zero-knowledge--watermark">3). Zero-knowledge + Watermark</h3>
+<blockquote>
+<p>在密码学中,水印的公开可验证性的目的是降低或者消除协议中某一方对协议其他参与方的可信度的依赖,减少 对协议的验证者身份的限制,从而提高整个方案的安全性,并且当协议参与各方出现争端时,方便争端的仲裁.</p>
+</blockquote>
+<p>To claim ownership of the model, the owner need to demonstrate they have knowledge of the surprising prediction. But once they used this trigger, the trigger will be leaked, and the adversary will recognize what the trigger is.</p>
+<blockquote>
+<p>Unfortunately, once a watermark is employed as evidence of ownership, enough information about the watermark may have been disclosed, rendering it vulnerable to removal attacks</p>
+</blockquote>
+<p><em>As a result, the watermark might be invalid in the future, which depends on the methods that attacker uses extract victim models.</em></p>
+<ul>
+<li>If attacker can get the trigger and take it as input to query the model, attacker can change the label of trigger image and try to remove the watermark. Therefore, &ldquo;how to remove the watermark based on a known trigger&rdquo; might be an interesting direction.</li>
+<li>If removing the watermark based on known trigger is possible, we can try to utilize zero-knowledge proof to perform the proof of watermark. Otherwise, it will unnecessary.
+Zero-knowledge proof protocols depends on the <strong>specific task</strong>. Designing a protocol which is proper to model watermark will be a challenge and key contribution.</li>
+</ul>
+<h3 id="4-forge-watermark-via-adversarial-examples">4). Forge watermark via adversarial examples</h3>
+<p>Scheme in this paper have not consider to verify whether the watermark is legal, so some malicious users can try to forge a &ldquo;trigger&rdquo; image and claim they have the ownership. If it is possible, the actual owner wont use this strategy to claim their ownership.</p>
+<blockquote>
+<p>可以采用的水印合法的条件是,合法的水印由计算不可逆的单向函数生成,版权证明者需要证明他知道生成该水印的单向函数的原象.</p>
+</blockquote>
+<p>But it is hard to apply this method directly to model watermark.</p>
+
+        </p>
+    </div>
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2022 The Marauders</span>
+    <span>
+        Say hello world &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

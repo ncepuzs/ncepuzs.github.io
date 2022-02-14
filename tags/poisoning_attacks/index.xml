@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Poisoning_Attacks on ZS_</title>
+    <link>https://ncepuzs.github.io/tags/poisoning_attacks/</link>
+    <description>Recent content in Poisoning_Attacks on ZS_</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 10 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ncepuzs.github.io/tags/poisoning_attacks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Entangled Watermarks as a Defense against Model Extraction</title>
+      <link>https://ncepuzs.github.io/post/entangled-watermarks-as-a-defense-against-model-extraction/</link>
+      <pubDate>Thu, 10 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ncepuzs.github.io/post/entangled-watermarks-as-a-defense-against-model-extraction/</guid>
+      <description>|Title: |Entangled Watermarks as a Defense against Model Extraction |Author &amp;amp; Institution:| Hengrui Jia &amp;amp; University of Toronto |Publisher &amp;amp; Date:| Usenix 2021 |Tags:| Poisoning attacks, watermark |Paper:| Address   1. Motivation: 1). Intellenctual Property and Model Extraction Attacks Deep Neural Networks is expensive for training, including collecting large amount of labeled data and requiring large computational power. However, model extraction attacks can steal a trained model successfully only requiring query-access.</description>
+    </item>
+    
+  </channel>
+</rss>
